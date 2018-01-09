@@ -163,12 +163,19 @@ module.exports = {
           {
             test: /\.pcss$/,
             use: [
-              require.resolve('style-loader'),
+              {
+                loader: require.resolve('style-loader'),
+                options: {
+                  sourceMap: true
+                }
+              },
               {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 1,
-                },
+                  modules: true,
+                  sourceMap: true
+                }
               },
               {
                 loader: require.resolve('postcss-loader'),
