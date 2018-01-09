@@ -17,7 +17,6 @@ require('../config/env');
 const fs = require('fs');
 const chalk = require('chalk');
 const webpack = require('webpack');
-// const WebpackDevServer = require('webpack-dev-server');
 const express = require('express');
 const devMiddleware = require('webpack-dev-middleware');
 const hotMiddleware = require('webpack-hot-middleware');
